@@ -1,0 +1,13 @@
+Download Noobs full, unzip and install to root directory of microSD card.
+
+Place microSD in Pi and boot. Choose install Raspian Full. On bottom of screen select country and keyboard during installation
+
+Select Country Timezone and Keyboard in Raspian
+
+Set Password PiMax138!
+
+Connect to wifi or wired ethernet
+
+Update software in Raspian (this takes a VERY Long time....just trust it and let it continue).
+
+
