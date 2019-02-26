@@ -10,4 +10,32 @@ Connect to wifi or wired ethernet
 
 Update software in Raspian (this takes a VERY Long time....just trust it and let it continue).
 
+Make Sure Raspian is Fully up to date:
+sudo apt update
+sudo apt upgrade
 
+Install dev2day and install plex
+wget -O - https://dev2day.de/pms/dev2day-pms.gpg.key | sudo apt-key add -
+echo "deb https://dev2day.de/pms/ jessie main" | sudo tee /etc/apt/sources.list.d/pms.list
+sudo apt update
+sudo apt install -t stretch plexmediaserver
+
+Configure Permissions and IP Address
+sudo nano /etc/default/plexmediaserver.prev
+
+change: PLEX_MEDIA_SERVER_USER=plex
+to: PLEX_MEDIA_SERVER_USER=pi 
+
+sudo service plexmediaserver restart
+hostname -I    *****Record IP Adress*******
+
+sudo nano /boot/cmdline.txt
+add line:
+ip=[YOUR.IP.ADDRESS.HERE]
+
+sudo reboot
+
+
+
+sudo chown pi:pi /folder/file
+sudo chmod 755 /folder/file
