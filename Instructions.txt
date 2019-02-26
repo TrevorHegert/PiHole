@@ -43,12 +43,12 @@ sudo apt-get install ntfs-3g
 
 sudo reboot
 
-mkdir /mnt/plex
+sudo mkdir /mnt/plex
 
 sudo chown pi:pi /mnt/plex
 sudo chmod 755 /mnt/plex
 
-sudo /etc/fstab
+sudo nano /etc/fstab
 add:
 
 /dev/sda1 /mnt/plex ntfs defaults 0 2
