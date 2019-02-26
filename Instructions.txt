@@ -10,6 +10,10 @@ Connect to wifi or wired ethernet
 
 Update software in Raspian (this takes a VERY Long time....just trust it and let it continue).
 
+Go To Pi Config in Desktop Menu, change hostname and enable ssh
+
+Reboot
+
 Make Sure Raspian is Fully up to date:
 sudo apt update
 sudo apt upgrade
