@@ -32,6 +32,7 @@ to: PLEX_MEDIA_SERVER_USER=pi
 
 sudo service plexmediaserver restart
 hostname -I    *****Record IP Adress*******
+curl ifconfig.co    *************Record External IP Address**************
 
 sudo nano /boot/cmdline.txt
 add line:
