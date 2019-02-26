@@ -46,8 +46,8 @@ sudo reboot
 
 sudo mkdir /mnt/plex
 
-sudo chown pi:pi /mnt/plex
-sudo chmod 755 /mnt/plex
+sudo chown -R pi:pi /mnt/plex
+sudo chmod -R 755 /mnt/plex
 
 sudo nano /etc/fstab
 add:
