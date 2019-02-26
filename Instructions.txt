@@ -35,7 +35,22 @@ ip=[YOUR.IP.ADDRESS.HERE]
 
 sudo reboot
 
+sudo apt-get install ntfs-3g
 
+sudo reboot
 
-sudo chown pi:pi /folder/file
-sudo chmod 755 /folder/file
+mkdir /mnt/plex
+
+sudo chown pi:pi /mnt/plex
+sudo chmod 755 /mnt/plex
+
+sudo /etc/fstab
+add:
+
+/dev/sda1 /mnt/plex ntfs defaults 0 2
+
+sudo reboot
+
+log into PlexIP:32400/web
+add media library
+
