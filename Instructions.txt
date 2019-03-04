@@ -31,14 +31,6 @@ change: PLEX_MEDIA_SERVER_USER=plex
 to: PLEX_MEDIA_SERVER_USER=pi 
 
 sudo service plexmediaserver restart
-hostname -I    *****Record IP Adress*******
-curl ifconfig.co    *************Record External IP Address**************
-
-sudo nano /boot/cmdline.txt
-add line:
-ip=[YOUR.IP.ADDRESS.HERE]
-
-sudo reboot
 
 sudo apt-get install ntfs-3g
 
@@ -58,6 +50,23 @@ sudo reboot
 
 log into PlexIP:32400/web
 add media library
+
+
+
+
+
+
+
+
+
+hostname -I    *****Record IP Adress*******
+curl ifconfig.co    *************Record External IP Address**************
+
+sudo nano /boot/cmdline.txt
+add line:
+ip=[YOUR.IP.ADDRESS.HERE]
+
+sudo reboot
 
 
 
