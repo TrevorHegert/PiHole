@@ -64,16 +64,24 @@ add media library
 
 No-IP Client
 No-IP service is providing free subdomains with low time to live (from 10 seconds). I am using DynDNS for a long time. But in last months they made some changes which moved NO-IP to first place. Now in DynDNS you even can not get free hostname, and you have to login to your account on the website once a month or your hostname will be deleted. With No-IP account you can request up to 3 subdomains and to remain your account in active state, running their client is enough. When you go through registration on noip.com site you can go to installation proccess of No-IP updater client. A little caveeat of installation is than No-IP client is not in Raspbian repositories (for now) so we will have to compile it from source code. Firstly download source code from official mirror.
+
 wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz
+
 Extract downloaded archive:
+
 tar vzxf noip-duc-linux.tar.gz
+
 When archive is extracted, "cd" to new extracted folder (name of folder can be different, because of version):
+
 cd noip-2.1.9-1
+
 Now we can compile by issuing:
 make
 make install
 During "make install" you will be asked for No-IP username, password and update interval (in minutes). After successful compilation you can run the client.
+
 noip2
+
 To start No-IP client at boot, edit crontab:
 crontab -e
 And add new line:
@@ -115,6 +123,7 @@ sudo nano /etc/gai.config
     reload yes
     precedence ::ffff:0:0/96 100
     precedence ::/0 10
+
 
 
 
