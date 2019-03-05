@@ -32,7 +32,8 @@ to: PLEX_MEDIA_SERVER_USER=pi
 
 sudo service plexmediaserver restart
 
-sudo apt-get install ntfs-3g
+
+
 
 sudo reboot
 
