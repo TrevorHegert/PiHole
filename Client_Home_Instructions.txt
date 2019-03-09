@@ -1,0 +1,49 @@
+
+hostname -I    *****Record IP Adress*******
+curl ifconfig.co    *************Record External IP Address**************
+
+sudo nano /boot/cmdline.txt
+add line:
+ip=[YOUR.IP.ADDRESS.HERE]
+
+sudo reboot
+
+
+
+
+
+
+
+Install PiHole
+
+wget -O basic-install.sh https://install.pi-hole.net
+sudo bash basic-install.sh
+
+
+Disable WLAN if connected by wired network
+
+sudo nano /boot/config.txt
+    dtoverlay=pi3-disable-wifi
+
+    also available: dtoverlay=pi3-disable-bottom
+
+
+
+Test Connection Speed:
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt update
+sudo apt upgrade
+
+
+If slow:
+
+sudo nano /etc/gai.config
+    reload yes
+    precedence ::ffff:0:0/96 100
+    precedence ::/0 10
+
+
+
+
