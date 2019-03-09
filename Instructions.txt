@@ -15,8 +15,9 @@ Go To Pi Config in Desktop Menu, change hostname and enable ssh
 Reboot
 
 Make Sure Raspian is Fully up to date:
-sudo apt update
-sudo apt upgrade
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install ntfs-3g
 
 Install dev2day and install plex
 wget -O - https://dev2day.de/pms/dev2day-pms.gpg.key | sudo apt-key add -
@@ -31,14 +32,7 @@ change: PLEX_MEDIA_SERVER_USER=plex
 to: PLEX_MEDIA_SERVER_USER=pi 
 
 sudo service plexmediaserver restart
-
-
-
-
-sudo reboot
-
 sudo mkdir /mnt/plex
-
 sudo chown -R pi:pi /mnt/plex
 sudo chmod -R 755 /mnt/plex
 
