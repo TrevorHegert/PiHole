@@ -25,7 +25,7 @@ echo "deb https://dev2day.de/pms/ jessie main" | sudo tee /etc/apt/sources.list.
 sudo apt update
 sudo apt install -t stretch plexmediaserver
 
-Configure Permissions and IP Address
+
 sudo nano /etc/default/plexmediaserver.prev
 
 change: PLEX_MEDIA_SERVER_USER=plex
